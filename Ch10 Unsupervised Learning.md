@@ -1,13 +1,13 @@
 # 10 Unsupervised Learning :octocat:
 
-➥ ./gh-md-toc https://github.com/ekalinin/nodeenv/wiki/Who-Uses-Nodeenv
 
 Table of Contents
 =================
 
-  * [Recap - Supervised vs. Unsupervised Learning](## Recap - Supervised vs. Unsupervised Learning)
-  * [Check List](## Check List)
-  * [Challenge of Unsupervised Learning](## Challenge of Unsupervised Learning)
+* [Recap - Supervised vs. Unsupervised Learning](## Recap - Supervised vs. Unsupervised Learning)
+* [Check List](## Check List)
+* [Challenge of Unsupervised Learning](## Challenge of Unsupervised Learning)
+
 
 ## Recap - Supervised vs. Unsupervised Learning
 
