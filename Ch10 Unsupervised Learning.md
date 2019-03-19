@@ -3,7 +3,7 @@
 
 Table of Contents
 =================  
-* <a href="#head">`Recap - Supervised vs. Unsupervised Learning`</a>   
+* <a href="#head"> Recap - Supervised vs. Unsupervised Learning </a>   
 * [Check List](## Check List)
 * [Challenge of Unsupervised Learning](## Challenge of Unsupervised Learning)
 
