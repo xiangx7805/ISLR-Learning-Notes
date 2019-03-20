@@ -64,20 +64,20 @@ that has the largest variance. By normalized, we mean that  ![equation](https://
 
 *  the elements ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cfn_cm%20%5Csmall%20%5Cphi%20_%7B11%7D%2C%20...%20%2C%20%5Cphi%20_%7Bp1%7D) : **the loadings of ﬁrst principal component**, the loadings make up the **principal component loading vector** : ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cfn_cm%20%5Csmall%20%5Cphi%20_1%20%3D%28%5Cphi%20_%7B11%7D%2C%20%5Cphi%20_%7B21%7D%2C%20...%20%2C%20%5Cphi%20_%7Bp1%7D%29%5ET).
 
-*  We constrain the loadings so that their sum of squares is equal to one, aka ![equation](https://latex.codecogs.com/svg.latex?%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20%5E2_%7Bj1%7D%3D1), since otherwise setting these elements to be arbitrarily large in absolute value could result in an arbitrarily large variance.
+*  We constrain the loadings so that their sum of squares is equal to one, aka ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csum%5E%7Bp%7D_%7Bj%3D1%7D%20%5Cphi%20_%7Bj1%7D%5E2%3D1), since otherwise setting these elements to be arbitrarily large in absolute value could result in an arbitrarily large variance.
 
 :dizzy: Now we have a *n* x *p* dataset, how do we compute the **First principal component**?
 
 > **Note:** we only care about **variance**.
 
 Thus we assume that each of the variables in X has been centered to have mean zero (that is, the column means of X are zero). We then look for the linear combination of the sample feature values of the form  
-![equation](https://latex.codecogs.com/svg.latex?z_%7Bi1%7D%3D%5Cphi%20_%7B11%7Dx_%7Bi1%7D%20&plus;%5Cphi%20_%7B21%7Dx_%7Bi2%7D%20&plus;%20...%20&plus;%5Cphi%20_%7Bp1%7Dx_%7Bip%7D) has largest sample variance, under constraint that ![equation](https://latex.codecogs.com/svg.latex?%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20%5E2_%7Bj1%7D%3D1).
+![equation](https://latex.codecogs.com/svg.latex?z_%7Bi1%7D%3D%5Cphi%20_%7B11%7Dx_%7Bi1%7D%20&plus;%5Cphi%20_%7B21%7Dx_%7Bi2%7D%20&plus;%20...%20&plus;%5Cphi%20_%7Bp1%7Dx_%7Bip%7D) has largest sample variance, under constraint that ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csum%5E%7Bp%7D_%7Bj%3D1%7D%20%5Cphi%20_%7Bj1%7D%5E2%3D1).
 
 In other words, the ﬁrst principal component loading vector solves the optimization problem  
-![equation](https://latex.codecogs.com/svg.latex?%5Cunderset%7B%20%5Cphi_%7B11%7D%2C...%2C%5Cphi_%7Bp1%7D%20%7D%7Bmaximize%7D%20%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi_%7Bj1%7Dx_%7Bij%7D%20%5Cright%20%29%20%5E2%5Cright%20%5C%7D%20%2C%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%5E2_%7Bj1%7D%20%3D1%20),  
-aka ![equation](https://latex.codecogs.com/svg.latex?%5Cunderset%7B%20%5Cphi_%7B11%7D%2C...%2C%5Cphi_%7Bp1%7D%20%7D%7Bmaximize%7D%20%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20z%5E2_%7Bi1%7D%20%5Cright%20%5C%7D.)
+![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7B%5Cphi%20_%7B11%7D%2C...%2C%20%5Cphi%20_%7Bp1%7D%7D%7Bmaximize%7D%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%5Cleft%20%28%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%5Cphi%20_%7Bj1%7D%20x_%7Bij%7D%20%5Cright%20%29%20%5E2%20%5Cright%20%5C%7D), ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csum%5E%7Bp%7D_%7Bj%3D1%7D%20%5Cphi%20_%7Bj1%7D%5E2%3D1),  
+aka ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7B%5Cphi%20_%7B11%7D%2C...%2C%20%5Cphi%20_%7Bp1%7D%7D%7Bmaximize%7D%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dz_%7Bi1%7D%5E2%20%5Cright%20%5C%7D)
 
-And since ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20x_%7Bij%7D%20%3D%200) , ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20z_%7Bi1%7D%20%3D%200) as well.
+And since ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dx_%7Bij%7D%20%3D0) , ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dz_%7Bi1%7D%20%3D0) as well.
 
 The maximize problem can be solved via an eigen decomposition.
 
@@ -105,11 +105,17 @@ is exact: ![equation](https://latex.codecogs.com/svg.latex?x_%7Bij%7D%20%3D%20%5
 2. **Uniqueness of the Principal Components**. Each principal component loading vector is unique, up to a sign flip. Similarly, the score vectors are unique up to a sign flip, since the variance of Z is the same as the variance of −Z.
 
 3. **The Proportion of Variance Explained (PVE)**.   
-The total variance present in a data set (assuming that the variables have been centered to have mean zero) is deﬁned as ![equation](https://latex.codecogs.com/svg.latex?%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20Var%28X_j%29%20%3D%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2)
+The total variance present in a data set (assuming that the variables have been centered to have mean zero) is deﬁned as
 
-and the variance explained by the *mth* principal component is ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20z_%7Bim%7D%5E2%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2)
+![equation](https://latex.codecogs.com/svg.latex?%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20Var%28X_j%29%20%3D%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2)
 
-Therefore, the PVE of the *mth* principal component is given by ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2%7D%7B%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2%7D)
+and the variance explained by the *mth* principal component is
+
+![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20z_%7Bim%7D%5E2%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2)
+
+Therefore, the PVE of the *mth* principal component is given by
+
+![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2%7D%7B%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2%7D)
 
 In total, there are min(n − 1, p) principal components, and their PVEs sum to one.
 
