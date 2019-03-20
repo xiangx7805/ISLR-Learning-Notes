@@ -133,15 +133,17 @@ We perform regression, classiﬁcation, and clustering using the principal compo
 ### <a id="K-Means"/> K-Means Clustering
 
 *  Minimizing the within-cluster variation, using squared Euclidean distance.  
-![equation](https://latex.codecogs.com/svg.latex?%5Cunderset%7Bminimize%7D%7BC_1%2C...C_k%7D%20%5Cleft%20%5C%7B%20%5Csum_%7BK%7D%5E%7Bk%3D1%7D%20%5Cfrac%7B1%7D%7B%5Cleft%20%7C%20C_k%20%5Cright%20%7C%7D%20%5Csum%20_%7Bi%2Ci%27%5Cin%20C_k%7D%20%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%28x_%7Bij%7D-x_%7Bi%27j%7D%29%5E2%20%5Cright%20%5C%7D), |Ck| denotes the number of observations in the kth cluster.
+![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7Bminimize%7D%7BC_1%2C...C_k%7D%20%5Cleft%20%5C%7B%20%5Csum_%7BK%7D%5E%7Bk%3D1%7D%20%5Cfrac%7B1%7D%7B%5Cleft%20%7C%20C_k%20%5Cright%20%7C%7D%20%5Csum%20_%7Bi%2Ci%27%5Cin%20C_k%7D%20%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%28x_%7Bij%7D-x_%7Bi%27j%7D%29%5E2%20%5Cright%20%5C%7D), |Ck| denotes the number of observations in the kth cluster.
 
 ----------  
-*  **Algorithm of K-Means Clustering**
------------  
+| **Algorithm of K-Means Clustering** |  
+| :---------------------------------------------|
+|
 1. Randomly assign a number, from 1 to K, to each of the observations. These serve as initial cluster assignments for the observations.
 2. Iterate until the cluster assignments stop changing:
    (a)   For each of the K clusters, compute the cluster centroid. Thekth cluster centroid is the vector of the p feature means for the observations in the kth cluster.
    (b)   Assign each observation to the cluster whose centroid is closest (where closest is deﬁned using Euclidean distance).
+   |
 --------------
 
 #### <a id="Lab2"/> Lab 2: K-Means Clustering
