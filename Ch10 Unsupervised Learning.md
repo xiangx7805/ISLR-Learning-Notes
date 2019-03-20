@@ -74,10 +74,11 @@ Thus we assume that each of the variables in X has been centered to have mean ze
 ![equation](https://latex.codecogs.com/svg.latex?z_%7Bi1%7D%3D%5Cphi%20_%7B11%7Dx_%7Bi1%7D%20&plus;%5Cphi%20_%7B21%7Dx_%7Bi2%7D%20&plus;%20...%20&plus;%5Cphi%20_%7Bp1%7Dx_%7Bip%7D) has largest sample variance, under constraint that ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csum%5E%7Bp%7D_%7Bj%3D1%7D%20%5Cphi%20_%7Bj1%7D%5E2%3D1).
 
 In other words, the ﬁrst principal component loading vector solves the optimization problem  
-![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7B%5Cphi%20_%7B11%7D%2C...%2C%20%5Cphi%20_%7Bp1%7D%7D%7Bmaximize%7D%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%5Cleft%20%28%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%5Cphi%20_%7Bj1%7D%20x_%7Bij%7D%20%5Cright%20%29%20%5E2%20%5Cright%20%5C%7D), ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csum%5E%7Bp%7D_%7Bj%3D1%7D%20%5Cphi%20_%7Bj1%7D%5E2%3D1),  
-aka ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7B%5Cphi%20_%7B11%7D%2C...%2C%20%5Cphi%20_%7Bp1%7D%7D%7Bmaximize%7D%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dz_%7Bi1%7D%5E2%20%5Cright%20%5C%7D)
+                ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7B%5Cphi%20_%7B11%7D%2C...%2C%20%5Cphi%20_%7Bp1%7D%7D%7Bmaximize%7D%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%5Cleft%20%28%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%5Cphi%20_%7Bj1%7D%20x_%7Bij%7D%20%5Cright%20%29%20%5E2%20%5Cright%20%5C%7D), ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Csum%5E%7Bp%7D_%7Bj%3D1%7D%20%5Cphi%20_%7Bj1%7D%5E2%3D1),  
+aka   
+                ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7B%5Cphi%20_%7B11%7D%2C...%2C%20%5Cphi%20_%7Bp1%7D%7D%7Bmaximize%7D%5Cleft%20%5C%7B%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dz_%7Bi1%7D%5E2%20%5Cright%20%5C%7D)
 
-And since ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dx_%7Bij%7D%20%3D0) , ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dz_%7Bi1%7D%20%3D0) as well.
+And since ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dx_%7Bij%7D%20%3D0) ,     ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dz_%7Bi1%7D%20%3D0) as well.
 
 The maximize problem can be solved via an eigen decomposition.
 
@@ -106,11 +107,11 @@ is exact: ![equation](https://latex.codecogs.com/svg.latex?x_%7Bij%7D%20%3D%20%5
 
 3. **The Proportion of Variance Explained (PVE)**.   
 The total variance present in a data set (assuming that the variables have been centered to have mean zero) is deﬁned as  
-        ![equation](https://latex.codecogs.com/svg.latex?%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20Var%28X_j%29%20%3D%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2)  
+                   ![equation](https://latex.codecogs.com/svg.latex?%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20Var%28X_j%29%20%3D%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2)  
 and the variance explained by the *mth* principal component is    
-        ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20z_%7Bim%7D%5E2%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2)   
+                    ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%20z_%7Bim%7D%5E2%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2)   
 Therefore, the PVE of the *mth* principal component is given by     
-        ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2%7D%7B%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2%7D)
+                   ![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csum_%7Bn%7D%5E%7Bi%3D1%7D%5Cleft%20%28%20%5Csum_%7Bp%7D%5E%7Bj%3D1%7D%20%5Cphi%20_%7Bjm%7Dx_%7Bij%7D%20%5Cright%20%29%5E2%7D%7B%20%5Csum_%7Bj%3D1%7D%5Ep%20%5Csum_%7Bi%3D1%7D%5En%20x_%7Bij%7D%5E2%7D)
 
 In total, there are min(n − 1, p) principal components, and their PVEs sum to one.
 
@@ -134,7 +135,8 @@ We perform regression, classiﬁcation, and clustering using the principal compo
 ### <a id="K-Means"/> K-Means Clustering
 
 *  Minimizing the within-cluster variation, using squared Euclidean distance.  
-   ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7Bminimize%7D%7BC_1%2C...C_k%7D%20%5Cleft%20%5C%7B%20%5Csum_%7BK%7D%5E%7Bk%3D1%7D%20%5Cfrac%7B1%7D%7B%5Cleft%20%7C%20C_k%20%5Cright%20%7C%7D%20%5Csum%20_%7Bi%2Ci%27%5Cin%20C_k%7D%20%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%28x_%7Bij%7D-x_%7Bi%27j%7D%29%5E2%20%5Cright%20%5C%7D),  ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%7B%5Cleft%20%7C%20C_k%20%5Cright%20%7C%7D) denotes the number of observations in the kth cluster.
+               ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cunderset%7Bminimize%7D%7BC_1%2C...C_k%7D%20%5Cleft%20%5C%7B%20%5Csum_%7BK%7D%5E%7Bk%3D1%7D%20%5Cfrac%7B1%7D%7B%5Cleft%20%7C%20C_k%20%5Cright%20%7C%7D%20%5Csum%20_%7Bi%2Ci%27%5Cin%20C_k%7D%20%5Csum_%7Bj%3D1%7D%5E%7Bp%7D%20%28x_%7Bij%7D-x_%7Bi%27j%7D%29%5E2%20%5Cright%20%5C%7D),  
+              ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%7B%5Cleft%20%7C%20C_k%20%5Cright%20%7C%7D) denotes the number of observations in the kth cluster.
 
 ----------  
 **Algorithm of K-Means Clustering**  
